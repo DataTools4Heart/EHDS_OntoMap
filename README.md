@@ -188,8 +188,8 @@ If you use `ehds_ontomap` in your work, please cite it using the metadata in
 
 ## Contact
 
-- Mohamed Aziz Ouhida — [mohamed.ouhida@bsc.es](mailto:mohamed.ouhida@bsc.es)
 - Fernando Gallego — [fernando.gallego@bsc.es](mailto:fernando.gallego@bsc.es)
+- Mohamed Aziz Ouhida — [mohamed.ouhida@bsc.es](mailto:mohamed.ouhida@bsc.es)
 
 ## License
 
