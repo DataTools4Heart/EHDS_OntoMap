@@ -88,7 +88,7 @@ def _shortlist(
             # the top k or tie with it.
             if len(best) >= top_k:
                 kth = sorted(best.values(), reverse=True)[top_k - 1]
-                if kth > float(scores[idx].min()):
+                if kth > float(np.min(scores[idx])):
                     break
             m *= 4
         if threshold is not None:

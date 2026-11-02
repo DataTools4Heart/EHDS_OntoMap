@@ -52,10 +52,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/nlp4bia-bsc/ehds_ontomap"
-Repository = "https://github.com/nlp4bia-bsc/ehds_ontomap"
-Issues = "https://github.com/nlp4bia-bsc/ehds_ontomap/issues"
-Changelog = "https://github.com/nlp4bia-bsc/ehds_ontomap/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/DataTools4Heart/EHDS_OntoMap"
+Repository = "https://github.com/DataTools4Heart/EHDS_OntoMap"
+Issues = "https://github.com/DataTools4Heart/EHDS_OntoMap/issues"
 
 [project.optional-dependencies]
 biencoder = [
@@ -68,7 +67,7 @@ biencoder = [
 packages = ["src/ehds_ontomap"]
 
 [tool.hatch.build.targets.sdist]
-include = ["src", "tests", "README.md", "LICENSE", "CHANGELOG.md", "CITATION.cff", "CODE_OF_CONDUCT.md", "SECURITY.md"]
+include = ["src", "tests", "README.md", "LICENSE", "CITATION.cff", "CONTRIBUTING.md"]
 
 # ----------------------------------------------------------------------
 # Tooling
@@ -123,7 +122,7 @@ warn_unreachable = true
 files = ["src"]
 
 [[tool.mypy.overrides]]
-module = ["pandas.*", "pyarrow.*", "rapidfuzz.*", "sentence_transformers.*"]
+module = ["pandas.*", "pyarrow.*", "rapidfuzz.*", "sentence_transformers.*", "torch.*", "transformers.*"]
 ignore_missing_imports = true
 
 [dependency-groups]

@@ -30,23 +30,23 @@ With **pip**:
 
 ```bash
 # string-match and levenshtein
-pip install "ehds_ontomap @ git+https://github.com/nlp4bia-bsc/ehds_ontomap.git"
+pip install "ehds_ontomap @ git+https://github.com/DataTools4Heart/EHDS_OntoMap.git"
 
 # all three methods (adds PyTorch and Transformers)
-pip install "ehds_ontomap[biencoder] @ git+https://github.com/nlp4bia-bsc/ehds_ontomap.git"
+pip install "ehds_ontomap[biencoder] @ git+https://github.com/DataTools4Heart/EHDS_OntoMap.git"
 ```
 
 With **uv**, to add it to your project:
 
 ```bash
-uv add "ehds_ontomap @ git+https://github.com/nlp4bia-bsc/ehds_ontomap.git"
-uv add "ehds_ontomap[biencoder] @ git+https://github.com/nlp4bia-bsc/ehds_ontomap.git"
+uv add "ehds_ontomap @ git+https://github.com/DataTools4Heart/EHDS_OntoMap.git"
+uv add "ehds_ontomap[biencoder] @ git+https://github.com/DataTools4Heart/EHDS_OntoMap.git"
 ```
 
 In a `requirements.txt` or `pyproject.toml` dependency list:
 
 ```text
-ehds_ontomap[biencoder] @ git+https://github.com/nlp4bia-bsc/ehds_ontomap.git
+ehds_ontomap[biencoder] @ git+https://github.com/DataTools4Heart/EHDS_OntoMap.git
 ```
 
 To pin a release, append a tag or commit, e.g. `...ehds_ontomap.git@v0.1.0`.
@@ -176,11 +176,10 @@ homonym of several codes in the ontology therefore returns all of them, and
 Bi-encoder scores are not probabilities. Inspect the score distribution on
 your own data before choosing a threshold for it.
 
-## Development
+## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Please follow the
-[Code of Conduct](CODE_OF_CONDUCT.md) and report security issues as described
-in [SECURITY.md](SECURITY.md).
+Want to improve or contribute to the library? See
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Citation
 

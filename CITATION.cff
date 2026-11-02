@@ -12,7 +12,7 @@ authors:
     email: fernando.gallego@bsc.es
     affiliation: "Barcelona Supercomputing Center (BSC)"
 license: EUPL-1.2
-repository-code: "https://github.com/nlp4bia-bsc/ehds_ontomap"
+repository-code: "https://github.com/DataTools4Heart/EHDS_OntoMap"
 keywords:
   - ontology mapping
   - entity linking
