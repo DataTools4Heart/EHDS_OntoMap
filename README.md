@@ -1,6 +1,5 @@
 # ehds_ontomap
 
-[![CI](https://github.com/nlp4bia-bsc/ehds_ontomap/actions/workflows/ci.yml/badge.svg)](https://github.com/nlp4bia-bsc/ehds_ontomap/actions/workflows/ci.yml)
 [![License: EUPL-1.2](https://img.shields.io/badge/license-EUPL--1.2-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue.svg)](pyproject.toml)
 
@@ -190,7 +189,7 @@ If you use `ehds_ontomap` in your work, please cite it using the metadata in
 
 ## Contact
 
-- Mohamed Ouhida — [mohamed.ouhida@bsc.es](mailto:mohamed.ouhida@bsc.es)
+- Mohamed Aziz Ouhida — [mohamed.ouhida@bsc.es](mailto:mohamed.ouhida@bsc.es)
 - Fernando Gallego — [fernando.gallego@bsc.es](mailto:fernando.gallego@bsc.es)
 
 ## License
