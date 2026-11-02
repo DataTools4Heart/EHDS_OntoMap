@@ -196,11 +196,6 @@ If you use `ehds_ontomap` in your work, please cite it using the metadata in
 
 Licensed under the [European Union Public Licence v. 1.2](LICENSE) (EUPL-1.2).
 
-Parts of the matching code are adapted from
-[dt4h-annotation-api](https://github.com/nlp4bia-bsc/dt4h-annotation-api)
-(MIT License, Copyright (c) 2026 NLP4BIA). The bi-encoder models are
-distributed by their authors under their own licences.
-
 ## Acknowledgements
 
 Developed by the [NLP4BIA](https://github.com/nlp4bia-bsc) group at the
