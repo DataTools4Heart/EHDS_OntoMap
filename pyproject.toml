@@ -1,0 +1,137 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ehds_ontomap"
+version = "0.1.0.dev0"
+description = "Map free-text clinical terms onto a code | term ontology with string matching, Levenshtein similarity or bi-encoders."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "EUPL-1.2"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Mohamed Ouhida", email = "mohamed.ouhida@bsc.es" },
+    { name = "Fernando Gallego", email = "fernando.gallego@bsc.es" },
+]
+maintainers = [
+    { name = "Mohamed Ouhida", email = "mohamed.ouhida@bsc.es" },
+    { name = "Fernando Gallego", email = "fernando.gallego@bsc.es" },
+]
+keywords = [
+    "ontology-mapping",
+    "entity-linking",
+    "concept-normalization",
+    "terminology",
+    "clinical-nlp",
+    "biencoder",
+    "datatools4heart",
+    "ehds",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+# Runtime dependencies are added by the maintainer with `uv add`; see CLAUDE.md.
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "rapidfuzz>=3.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/nlp4bia-bsc/ehds_ontomap"
+Repository = "https://github.com/nlp4bia-bsc/ehds_ontomap"
+Issues = "https://github.com/nlp4bia-bsc/ehds_ontomap/issues"
+Changelog = "https://github.com/nlp4bia-bsc/ehds_ontomap/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+biencoder = [
+    "sentence-transformers>=3.0",
+    "torch>=2.6",
+    "transformers>=4.48",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ehds_ontomap"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "CHANGELOG.md", "CITATION.cff", "CODE_OF_CONDUCT.md", "SECURITY.md"]
+
+# ----------------------------------------------------------------------
+# Tooling
+# ----------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+markers = [
+    "model: downloads a Hugging Face model; deselected in the default CI run",
+]
+filterwarnings = ["error::DeprecationWarning:ehds_ontomap.*"]
+
+[tool.coverage.run]
+source = ["ehds_ontomap"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_also = ["if TYPE_CHECKING:", "raise NotImplementedError"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # isort
+    "B",        # bugbear
+    "UP",       # pyupgrade
+    "SIM",      # simplify
+    "RUF",      # ruff-specific
+    "D",        # pydocstyle
+    "PT",       # pytest style
+]
+ignore = ["D105", "D107"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unreachable = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["pandas.*", "pyarrow.*", "rapidfuzz.*", "sentence_transformers.*"]
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pandas-stubs>=2.3.3.260113",
+    "pre-commit>=4.6.2",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.3",
+]

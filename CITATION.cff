@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ehds_ontomap: ontology mapping for clinical terminology"
+type: software
+authors:
+  - given-names: Mohamed
+    family-names: Ouhida
+    email: mohamed.ouhida@bsc.es
+    affiliation: "Barcelona Supercomputing Center (BSC)"
+  - given-names: Fernando
+    family-names: Gallego
+    email: fernando.gallego@bsc.es
+    affiliation: "Barcelona Supercomputing Center (BSC)"
+license: EUPL-1.2
+repository-code: "https://github.com/nlp4bia-bsc/ehds_ontomap"
+keywords:
+  - ontology mapping
+  - entity linking
+  - concept normalization
+  - DataTools4Heart
