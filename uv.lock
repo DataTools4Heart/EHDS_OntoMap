@@ -594,6 +594,10 @@ dependencies = [
     { name = "pyarrow", version = "26.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "rapidfuzz", version = "3.14.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "rapidfuzz", version = "3.14.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "torch", version = "2.14.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "torch", version = "2.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "transformers", version = "5.20.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "transformers", version = "5.22.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
 ]
 
 [package.optional-dependencies]
@@ -624,7 +628,9 @@ requires-dist = [
     { name = "pyarrow", specifier = ">=15" },
     { name = "rapidfuzz", specifier = ">=3.9" },
     { name = "sentence-transformers", marker = "extra == 'biencoder'", specifier = ">=3.0" },
+    { name = "torch", specifier = ">=2.14.1" },
     { name = "torch", marker = "extra == 'biencoder'", specifier = ">=2.6" },
+    { name = "transformers", specifier = ">=5.20.2" },
     { name = "transformers", marker = "extra == 'biencoder'", specifier = ">=4.48" },
 ]
 provides-extras = ["biencoder"]
